@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Product {
 
     @Id
-    private int ID;
+    private int productId;
     private String name;
     private String company;
     private String batchNo;
