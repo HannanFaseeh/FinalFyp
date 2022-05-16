@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping(value = "/inventory")
+@RequestMapping(value = "/inventoryManager")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class InventoryManagerController {
     @Autowired
@@ -34,7 +34,7 @@ public class InventoryManagerController {
     public ResponseEntity<?> addManager(@Valid @RequestBody InventoryManager inventoryManager, BindingResult result) {
         if (result.hasErrors()) {
 
-           Map<String, String> errors = new HashMap<>();
+            Map<String, String> errors = new HashMap<>();
             for (FieldError error : result.getFieldErrors()) {
                 errors.put(error.getField(), error.getDefaultMessage());
             }

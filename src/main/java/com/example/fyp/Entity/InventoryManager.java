@@ -20,7 +20,6 @@ public class InventoryManager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String name;
     @Column(unique = true , nullable = false)
     private String email;

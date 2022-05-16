@@ -14,12 +14,9 @@ public class ProductService {
     private ProductRep productRep;
 
 
-
-
-    public List<Product> getProducts(){
+    public List<Product> getProducts()
+    {
         return productRep.findAll();
-
-
     }
 
     public Product getProduct(int id){
@@ -36,7 +33,7 @@ public class ProductService {
     }
 
     public Product updateProduct(int id,Product product){
-        product.setID(id);
+        product.setProductId(id);
         productRep.save(product);
         return product;
     }
