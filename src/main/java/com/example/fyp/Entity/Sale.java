@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -25,7 +24,6 @@ public class Sale {
     private double totalBill;            //Bill After Discounts
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cc_fk",referencedColumnName = "productId")
+    @JoinColumn(name = "cc_fk",referencedColumnName = "id")
     private List<Product> productList;
-
 }
